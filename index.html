@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,297 @@
     <title>C# Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <main id="main-doc">
         <section class="main-section" id="Introduction">
             <header>Introduction</header>
+            <article>
+                <h2>What Is C#?</h2>
+                <p>C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.
+                </p>
+                <p>It is used for:</p>
+                <ul>
+                    <li>Mobile Applications</li>
+                    <li>Desktop Applications</li>
+                    <li>Web Applications</li>
+                    <li>Web Services</li>
+                    <li>And much, much more!</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Why Use C#?</h2>
+                <ul>
+                    <li>It's one of the most popular programming languages in the world.</li>
+                    <li>It is easy to learn and simple to use.</li>
+                    <li>It has a huge community support</li>
+                </ul>
+            </article>
         </section>
-        <section class="main-section" id="Syntax">
-            <header>Syntax</header>
+        <section class="main-section" id="C#_Syntax">
+            <header>C# Syntax</header>
+            <h2>C# Syntax</h2>
+            <p>Normally when you create a new project in Visual Studio, it will create some default code for you.</p>
+            <div class="card">
+                <h3 class="card-title">Example</h3>
+                <div class="card-code">
+                    <pre>using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");    
+    }
+    }
+}</pre>
+                    <samp class="code_result">Hello World!</samp>
+                </div>
+            </div>
         </section>
         <section class="main-section" id="Variables">
             <header>Variables</header>
-        </section>
-        <section class="main-section" id="Data_Types">
-            <header>Data Types</header>
+            <article>
+                <h2>Variable Types</h2>
+                <p>Variables are containers for storing data values.</p>
+                <p>In C#, there are different <b>types</b> of variables (defined with different keywords), for example:
+                </p>
+                <ul>
+                    <li><span class="li-title">int</span> - stores integers (whole numbers), without decimals, such as
+                        123
+                        or -123</li>
+                    <li><span class="li-title">double</span> - stores floating point numbers, with decimals, such as
+                        19.99
+                        or -19.99</li>
+                    <li><span class="li-title">char</span> - stores single characters, such as 'a' or 'B'. Char values
+                        are
+                        surrounded by single quotes</li>
+                    <li><span class="li-title">string</span> - stores text, such as "Hello World". String values are
+                        surrounded by double quotes</li>
+                    <li><span class="li-title">bool</span> - stores values with two states: true or false</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Declaring Varibales</h2>
+                <p>To create a variable, you must specify the type and assign it a value:</p>
+                <div class="card">
+                    <p class="card-title">Syntax</p>
+                    <div class="card-code">
+                        <pre>type variableName = value;</pre>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Constants</h2>
+                <p>If you don't want others (or yourself) to overwrite existing values, you can add the const keyword in
+                    front of the variable type.</p>
+                <p>This will declare the variable as "constant", which means unchangeable and read-only:</p>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>const int myNum = 15;
+myNum = 20; <span class="code-comment">// error</span></pre>
+                    </div>
+                </div>
+            </article>
         </section>
         <section class="main-section" id="User_Input_and_Output">
             <header>User Input and Output</header>
-        </section>
-        <section class="main-section" id="Operators">
-            <header>Operators</header>
+            <article>
+                <h2>Output</h3>
+                    <p>To output values or print text in C#, you can use the <span class="important">WriteLine()</span>
+                        method:</p>
+                    <div class="card">
+                        <h3 class="card-title">Example</h3>
+                        <div class="card-code">
+                            <pre>Console.WriteLine("Hello World!");</pre>
+                        </div>
+                    </div>
+            </article>
+            <article>
+                <h2>The Write Method</h3>
+                    <p>There is also a <span class="important">Write()</span> method, which is similar to <span
+                            class="important">WriteLine()</span>.</p>
+                    <p>The only difference is that it does not insert a new line at the end of the output:</p>
+                    <div class="card">
+                        <h3 class="card-title">Example</h3>
+                        <div class="card-code">
+                            <pre>Console.Write("Hello World! ");
+Console.Write("I will print on the same line.");</pre>
+                        </div>
+                    </div>
+            </article>
         </section>
         <section class="main-section" id="If_Else">
             <header>If Else</header>
+            <article>
+                <h2>C# Conditions and If Statements</h2>
+                <p>C# supports the usual logical conditions from mathematics:</p>
+                <ul>
+                    <li>Less than: <code></code>a < b</code></b></li>
+                    <li>Less than or equal to: <code>a <= b</code></li>
+                    <li>Greater than: <code>a > b</code></li>
+                    <li>Greater than or equal to: <code>a >= b</code></li>
+                    <li>Equal to <code>a == b</code></li>
+                    <li>Not Equal to: <code>a != b</code></li>
+                </ul>
+                <p>You can use these conditions to perform different actions for different decisions.</p>
+                <p>C# has the following conditional statements:</p>
+                <ul>
+                    <li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true
+                    </li>
+                    <li>Use <code>else</code> to specify a block of code to be executed, if the same condition is false
+                    </li>
+                    <li>Use <code>else if</code> to specify a new condition to test, if the first condition is false
+                    </li>
+                    <li>Use <code>switch</code> to specify many alternative blocks of code to be executed</li>
+                </ul>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>if (20 > 18) 
+{
+    Console.WriteLine("20 is greater than 18");
+}</pre>
+                    </div>
+                </div>
+            </article>
         </section>
         <section class="main-section" id="Switch">
             <header>Switch</header>
+            <article>
+                <h2>C# Switch Statements</h2>
+                <p>Use the switch statement to select one of many code blocks to be executed.</p>
+                <div class="card">
+                    <div class="card-title">Syntax</div>
+                    <div class="card-code">
+                        <pre>switch(expression) 
+{
+    case x:
+    // code block
+    break;
+    case y:
+    // code block
+    break;
+    default:
+    // code block
+    break;
+}</pre>
+                    </div>
+                </div>
+                <p>This is how it works:</p>
+                <ul>
+                    <li>The switch expression is evaluated once</li>
+                    <li>The value of the expression is compared with the values of each case</li>
+                    <li>If there is a match, the associated block of code is executed</li>
+                    <li>The break and default keywords will be described later in this chapter</li>
+                </ul>
+                <p>The example below uses the weekday number to calculate the weekday name:</p>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>int day = 4;
+switch (day) 
+{
+    case 1:
+    Console.WriteLine("Monday");
+    break;
+    case 2:
+    Console.WriteLine("Tuesday");
+    break;
+    case 3:
+    Console.WriteLine("Wednesday");
+    break;
+    case 4:
+    Console.WriteLine("Thursday");
+    break;
+    case 5:
+    Console.WriteLine("Friday");
+    break;
+    case 6:
+    Console.WriteLine("Saturday");
+    break;
+    case 7:
+    Console.WriteLine("Sunday");
+    break;
+}</pre>
+                        <samp>// Outputs "Thursday" (day 4)</samp>
+                    </div>
+            </article>
         </section>
         <section class="main-section" id="For_Loop">
             <header>For Loop</header>
+            <article>
+                <h2>For Loop</h2>
+                <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+                <div class="card">
+                    <h3 class="card-title">Syntax</h3>
+                    <div class="card-code">
+                        <pre>for (statement 1; statement 2; statement 3) 
+{
+    // code block to be executed
+}</pre>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>for (int i = 0; i < 5; i++) 
+{
+    Console.WriteLine(i);
+}</pre>
+                    </div>
+                </div>
+            </article>
         </section>
         <section class="main-section" id="Break/Continue">
             <header>Break/Continue</header>
+            <article>
+                <h2>C# Break</h2>
+                <p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.</p>
+                <p>The break statement can also be used to jump out of a loop.</p>
+                <p>This example jumps out of the loop when i is equal to 4:</p>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>for (int i = 0; i < 10; i++) 
+{
+    if (i == 4) 
+    {
+    break;
+    }
+    Console.WriteLine(i);
+}</pre>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>C# Continue</h2>
+                <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+                <p>This example skips the value of 4:</p>
+                <div class="card">
+                    <h3 class="card-title">Example</h3>
+                    <div class="card-code">
+                        <pre>for (int i = 0; i < 10; i++) 
+{
+    if (i == 4) 
+    {
+    continue;
+    }
+    Console.WriteLine(i);
+}</pre>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <nav id="navbar">
-        <header>C# Documentation</header>
+        <header id="nav-title">C# Documentation</header>
         <a class="nav-link" href="#Introduction">Introduction</a>
-        <a class="nav-link" href="#Syntax">Get Started</a>
+        <a class="nav-link" href="#C#_Syntax">C# Syntax</a>
         <a class="nav-link" href="#Variables">Variables</a>
-        <a class="nav-link" href="#Data_Types">Data Types</a>
         <a class="nav-link" href="#User_Input_and_Output">User Input and Output</a>
         <a class="nav-link" href="#Operators">Operators</a>
         <a class="nav-link" href="#If_Else">If Else</a>
@@ -54,4 +307,5 @@
         <a class="nav-link" href="#Break/Continue">Break/Continue</a>
     </nav>
 </body>
+
 </html>
